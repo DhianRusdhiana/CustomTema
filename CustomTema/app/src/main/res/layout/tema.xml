@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+	
+	<android.support.v7.widget.Toolbar
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="?attr/actionBarSize"
+		android:background="?attr/colorPrimary"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+	<RelativeLayout
+		
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@*android:color/white">
+		
+		<LinearLayout
+			android:padding="10dp"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+	
+	
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Tema Yang Dipakai:"
+        android:textStyle="bold" />
+	
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="120dp">
+		
+		<ImageView
+			android:id="@+id/preview"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:src="@drawable/palete"
+			android:layout_centerInParent="true"/>
+		
+		<TextView
+			android:layout_marginBottom="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:id="@+id/nama_tema"
+			android:textSize="15dp"
+			android:textStyle="bold"
+			android:textColor="#ffffffff" />
+	</RelativeLayout>
+
+    <TextView
+		android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Pilih Tema"
+        android:textStyle="bold" />
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		<com.dhian.customview.FloatingActionButton
+			xmlns:fab="http://schemas.android.com/apk/res-auto"
+			android:layout_margin="15dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:id="@+id/fab"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			fab:fab_icon="@drawable/picker"
+			android:onClick="colorPicker"/>
+	</RelativeLayout>
+    
+</LinearLayout>
